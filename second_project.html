@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        #title{
+            font-size: xx-large;
+            text-align: center;
+            color: white;
+            padding-top: 20px;
+        }
+        #description{
+            text-align: center;
+            font-style: italic;
+            color: white;
+            font-size: larger;
+            padding-bottom: 5px;
+        }
+        body{
+            background: rgb(17, 83, 206);
+        }
+        #survey-form{
+            background: rgb(4, 50, 134);
+            border-radius: 10px;
+            width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 40px;
+            padding-top: 20px;
+            overflow: hidden;
+        }
+        .text{
+            color: white;
+            font-size: x-large;
+            padding-top: 10px;
+            margin-top: 20px;
+        }
+        .blank{
+            width: 90%;
+            /* height: ; */
+            font-size: x-large;
+            padding-left: 3%;
+            margin-bottom: 20px;
+            margin-top: 5px;
+            border: 0px;
+            border-radius: 5px;
+        }
+        #comment{
+            width: 97%;
+        }
+        #submit{
+            background: rgb(12, 216, 12);
+            border-radius: 10px;
+            padding: 3px;
+            padding-left: 15%;
+            padding-right: 15%;
+            margin-bottom: 20px;
+            margin-left: 25%;
+            border: 0;
+        }
+        #submit:hover{
+            background-color: green;
+        }
+        @media (max-width:500px){
+            #description{
+                font-size: small;
+                padding-left: 3px;
+                padding-right: 3px;
+            }
+        }
+        @media (max-width:400px){
+            #survey-form{
+                min-width: 200px;
+            }
+            .text{
+                font-size: larger;
+            }
+            .blank{
+                height: 30px;
+                font-size: larger;
+            }
+        }
+        @media (min-width:890px){
+            #survey-form{
+                width: 900px;
+                min-width: 500px;
+
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title">Survey Form</h1>
+    <p id="description">Thank you for taking the time to help us improve the platform</p>
+    <form action="#" id="survey-form">
+       <label id="name-label" class="text" for="name">Name</label> <br> <input type="text" name="name" class="blank" id="name" placeholder="Input your name" required> <br>
+       <label id="email-label" class="text" for="email">Email</label> <br> <input type="email" name="email" class="blank" id="email" placeholder="example@gamil.com" required><br>
+       <label id="number-label" class="text" for="number">Age</label> <br> <input type="number" name="age" class="blank" id="number" min="18" max="100" placeholder="Input your age"><br>
+       <p class="text">What is your favorite feature in freecodecamp?</p>
+       <select name="user_like" class="blank" id="dropdown">
+           <option>--select option--</option>
+           <option value="challange">challange</option>
+           <option value="project">project</option>
+           <option value="open source">open source</option>
+    </select>
+       <div>
+           <p class="text">would you recomended freeCodeCamp to your friend?</p>
+           <label class="text" >Definetly<input type="radio" name="user-recomended"  class="input-radio" value="definetly" checked></label><br>
+           <label class="text">May be<input type="radio" name="user-recomended" class="input-radio" value="may_be"></label><br>
+           <label class="text">Not sure <input type="radio" name="user-recomended" class="input-radio" value="Not_sure"> </label>
+       </div>
+       <p class="text">What would you recomend to improve us?</p>
+       <label class="text"><input type="checkbox" name="front-end projects" value="front-end projects">Front-end projects</label><br>
+       <label class="text"><input type="checkbox" name="back-end projects" value="back-end projects">Back-end projects</label><br>
+       <label class="text"><input type="checkbox" name="additoinal courses" value="Additional courses">Additional Courses</label><br>
+       <label class="text"><input type="checkbox" name="video" value="video">Video</label><br>
+       <label class="text"><input type="checkbox" name="blog" value="Blog">Blog</label><br>
+       <label class="text"><input type="checkbox" name="test" value="Test">Test</label><br><br>
+       <label class="text" for="comment">Any comments or suggestions?</label>
+       <br>
+       <textarea name="suggestions" id="comment" cols="90" rows="5" placeholder="Enter your comment and any Suggestion here....."></textarea><br><br>
+       <button type="submit" class="text" id="submit">Submit</button>
+    </form>
+</body>
+</html>
